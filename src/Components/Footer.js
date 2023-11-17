@@ -6,7 +6,7 @@ import  FacebookIcon  from '@mui/icons-material/Facebook';
 import  LinkedinIcon  from '@mui/icons-material/LinkedIn';
 import '../styles/Footer.css';
 function Footer() {
-    const inputRef = useRef(null);// ref={inputRef}
+    //const inputRef = useRef(null);// ref={inputRef}
     //useEffect(()=>{
      // inputRef.current.setAttribute()
   //},[]);

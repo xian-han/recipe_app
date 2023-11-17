@@ -10,7 +10,8 @@ function Menu() {
             {MenuList.map((menuItem,key)=>{
               return <MenuItem 
               key={key}
-              image={menuItem.image} 
+              front_image={menuItem.front_image} 
+              back_image={menuItem.back_image}
               name={menuItem.name} 
               price={menuItem.price}/>      
             })}
