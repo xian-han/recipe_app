@@ -1,6 +1,10 @@
 import React from 'react'
+import { useRef } from 'react';
 
-function MenuItem({image,name,price}) {
+function MenuItem({front_image,back_image,name,price}) {
+  
+  const listElement = useRef(null);
+  
   const show =()=>{
       const dialog=document.querySelector('.dialogFrame');
       dialog.showModal();
@@ -9,9 +13,18 @@ function MenuItem({image,name,price}) {
       const dialog = document.querySelector('.dialogFrame');
       dialog.close();
   };
+  const test=()=>{
+    listElement.current.classList.toggle('');
+    let a=document.getElementById('filp-container');
+    console.log(a.classList);
+    //`${document.getElementById('filp-container')}`
+  };
   return (
     <div className="menuItem">
-      <div style={{backgroundImage:`url(${image})`}}></div>
+      <div id="flip-container" className="flip-container" onTouchStart={""}>
+        <div style={front_image!=""?{backgroundImage:`url(${front_image})`}:{backgroundImage:`url()`}} className="front_image"></div>
+        <div style={front_image!=""?{backgroundImage:`url(${back_image})`}:{backgroundImage:`url()`}} className="back_image"></div>
+      </div>
       <h1>{name}</h1>
       <p>${price}</p>
       <button onClick={show}>show</button>
