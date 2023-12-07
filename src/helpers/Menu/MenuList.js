@@ -1,42 +1,47 @@
-import Madeleine from '../dessert/Madeleine.jpg';
-import Matching from '../pictures/Matching.png'
-import Basque from '../dessert/Basque2.jpg';
-import Bagel from '../dessert/Bagel2.jpg';
-import Scone from '../dessert/Scone.jpg';
-import Dried_Longan_CupCake from '../dessert/Dried_Longan_CupCake.jpg';
-import Tiramisu from '../dessert/Tiramisu.jpg';
+import Madeleine from '../../dessert/Madeleine.jpg';
+import Basque from '../../dessert/Basque2.jpg';
+import Bagel from '../../dessert/Bagel2.jpg';
+import Scone from '../../dessert/Scone.jpg';
+import Dried_Longan_CupCake from '../../dessert/Dried_Longan_CupCake.jpg';
+import Tiramisu from '../../dessert/Tiramisu.jpg';
 export const MenuList = [
     {
+        id:1,
         name: "Madeleine",
         front_image: Madeleine,
-        back_image: Matching,
+        back_image: "",
         price:70,
     },
     {
+        id:2,
         name:"Basque",
         front_image: Basque,
         back_image: "",
         price: 500,
     },
     {
+        id:3,
         name:"Bagel",
         front_image: Bagel,
         back_image: "",
         price:80,
     },
     {
+        id:4,
         name:"Scone",
         front_image: Scone,
         back_image: "",
         price:85,
     },
     {
+        id:5,
         name: "Dried_Longan_CupCake",
         front_image: Dried_Longan_CupCake,
         back_image: "",
         price:40,
     },
     {
+        id:6,
         name:"Tiramisu",
         front_image: Tiramisu,
         back_image: "",

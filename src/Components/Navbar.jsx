@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { Link } from "react-router-dom";
 import ReorderIcon from '@mui/icons-material/Reorder';
+import { ShoppingCart} from 'phosphor-react';
 import '../styles/Navbar.css';
 
 function Navbar() {
@@ -20,15 +21,17 @@ function Navbar() {
         <div className="hiddenLinks">
           <Link to="/">Home</Link>
           <Link to="/menu">Menu</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/cart">
+              <ShoppingCart size={32}/>
+          </Link>
         </div>
       </div>
       <div id="rightbar" className="rightbar">
         <Link to="/">Home</Link>
         <Link to="/menu">Menu</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/cart">
+              <ShoppingCart size={32}/>
+        </Link>
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

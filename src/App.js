@@ -1,15 +1,14 @@
 import './App.css';
-import Test from './Components/test';
-import Searchbar from './Components/searchbar';
-import Dessert from './Components/dessert';
 
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
+import Cart from './pages/Cart';
 import {BrowserRouter as Router,Route,Switch,Routes} from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import { Iron } from '@mui/icons-material';
+import { ShopContextProvider } from './helpers/Menu/Shop-Context';
 
 
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -40,16 +39,17 @@ function App() {
     return (
       
       <div className="App">
-        
+        <ShopContextProvider>
         <Router>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/cart" element={<Cart/>} />
           </Routes>
           <Footer />
         </Router>
-        
+        </ShopContextProvider>
       </div>
     
     );
